@@ -1,0 +1,24 @@
+<div class="container header">
+  <div class="row">
+    <div class="col">
+      <%= image_tag  "logo.png", class: 'logo' %>  
+    </div>    
+  </div>
+</div>
+
+<div class="container">
+  <div class="card-deck">
+    <% @researches.each do |r| %>
+      <div class="card">
+        <%= image_tag(r.image || 'sem-imagem.jpeg', class: 'card-img-top')%>
+        <div class="card-body">
+          <h5 class="card-title text-center"><%= r.title %></h5><hr>
+          <p class="card-text"><%= r.description %></p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted"> <%= r.author %> </small>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

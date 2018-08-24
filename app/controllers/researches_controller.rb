@@ -1,7 +1,11 @@
 class ResearchesController < ApplicationController
 
   def index
-    @researches = [ 'Tanque de Água Viva', 'Tanque de corais', 'Grande Tanque']
+    @tanks = Tank.joins(:researches).uniq
+  end
+
+  def show
+    @researches = Tank.find(params[:id]).researches
   end
   
 end

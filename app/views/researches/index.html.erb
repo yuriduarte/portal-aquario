@@ -1,7 +1,20 @@
-<h1>Pesquisas</h1>
+<%= content_for :head do %>
+  <%= stylesheet_link_tag 'researches' %>
+<% end %>
 
-<ul>
-  <% @researches.each do |research| %>
-    <li><%= @research %> </li>
-  <% end %>  
-</ul>
+<div class="container header">
+  <div class="row">
+    <div class="col">
+      <%= image_tag  "logo.png", class: 'logo' %>  
+      <h5 class="text-center">Pesquisas</h5>
+    </div>    
+  </div>
+</div>
+
+
+  <% @tanks.each do |t| %>
+    <li class="header"> 
+      <%= link_to t.name, research_path(t.id), class: 'botao bt-home bt-pesquisa' %>
+    </li>
+  <% end %>
+
