@@ -1,0 +1,19 @@
+<%= content_for :head do %>
+  <%= stylesheet_link_tag 'guidedtour' %>
+<% end %>
+
+<div class="container header">
+  <div class="row">
+    <div class="col">
+      <%= link_to "/" do %>
+        <%= image_tag "logo.png", class: 'logo' %>  
+      <% end %>
+    </div>    
+  </div>
+</div>
+
+<% @tanks.each do |t| %>
+  <li class="header">
+    <%= link_to t.name_pt_br, guidedtour_path(t.id), class: 'botao bt-home bt-pesquisa' %>
+  </li>
+<% end %>

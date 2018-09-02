@@ -1,0 +1,2 @@
+module GuidedtourHelper
+end

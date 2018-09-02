@@ -12,19 +12,28 @@
 
 ActiveRecord::Schema.define(version: 20180821233941) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "researches", force: :cascade do |t|
-    t.integer  "tank_id",     null: false
-    t.string   "title"
+    t.integer  "tank_id",                        null: false
+    t.string   "title_pt_br"
+    t.string   "title_en_us"
+    t.string   "title_es_es"
     t.string   "image"
-    t.text     "description"
-    t.string   "author"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["tank_id"], name: "index_researches_on_tank_id"
+    t.text     "description_pt_br"
+    t.text     "description_en_us"
+    t.text     "description_es_es"
+    t.string   "author",            default: [],              array: true
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.index ["tank_id"], name: "index_researches_on_tank_id", using: :btree
   end
 
   create_table "tanks", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name_pt_br"
+    t.string   "name_en_us"
+    t.string   "name_es_es"
     t.integer  "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

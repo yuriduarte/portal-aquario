@@ -16,3 +16,9 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+
+$(document).ready(function() {
+  $('a[disabled=disabled]').click(function(event){
+      event.preventDefault(); // Prevent link from following its href
+  });
+});

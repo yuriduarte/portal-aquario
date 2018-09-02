@@ -1,11 +1,13 @@
 class ResearchesController < ApplicationController
 
   def index
-    @tanks = Tank.joins(:researches).uniq
+    @tanks = Tank.joins(:researches).uniq.order(:id)
+    puts @tanks.pluck(:id)
   end
 
   def show
-    @researches = Tank.find(params[:id]).researches
+    @tank = Tank.find(params[:id])
+    @researches = @tank.researches
   end
   
 end
