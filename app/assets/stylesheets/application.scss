@@ -16,7 +16,7 @@
 
 body{
   background-image:
-    url('desktop.jpg');
+    asset-url('desktop.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -135,7 +135,7 @@ body{
 @media (max-width: 767px){ 
   body {
     background-image:
-      url('mobile.jpg');
+      asset-url('mobile.jpg');
       background-size: cover;
       background-repeat: no-repeat;
   }
@@ -144,7 +144,7 @@ body{
 @media (max-width: 540px){
   body {
     background-image:
-      url('mobile.jpg');
+      asset-url('mobile.jpg');
       background-size: cover;
       background-repeat: no-repeat;
   }
