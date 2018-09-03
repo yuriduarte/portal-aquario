@@ -22,12 +22,15 @@ body{
 }
 
 .band{
-  margin-top: 1px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
 }
 
 .bandeiras{
   margin-top: 3px;
-  width: 10%;
+  width: 2rem;
   float: right;
   border: 1px solid transparent;
   border-radius: 0.75rem;
@@ -131,7 +134,7 @@ body{
 .cartao{
   margin-top: 3%;
 }
-//s
+
 @media (max-width: 767px){ 
   body {
     background-image:
@@ -194,9 +197,6 @@ body{
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
-}
-
-@media (min-width: 576px){
   .card-deck {
     flex-wrap: wrap;
     flex-direction: column;
@@ -207,4 +207,25 @@ body{
     justify-content: center;
     margin: auto;
   }
+}
+
+@media (min-width: 576px){
+  .card-deck {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 5%;
+    justify-content: center;
+    margin: auto;
+  }
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
 }

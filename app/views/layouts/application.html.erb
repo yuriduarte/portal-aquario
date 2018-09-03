@@ -11,7 +11,7 @@
   <body>
     <div class="container header">
       <div class="row">
-        <div class="col band">
+        <div class="col band fixed-top">
           <%= link_to es_es_path do %>
             <%= image_tag "es.png", class: 'img-responsive bandeiras' %>  
           <% end %>         
@@ -27,5 +27,10 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= yield(:footer) %>
+    <footer class="fixed-bottom copy">
+      <div>
+        Copyright© Todos os direitos reservados à AquaRio.
+      </div>
+    </footer>
   </body>
 </html>
