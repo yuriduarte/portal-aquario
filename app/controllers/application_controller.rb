@@ -2,10 +2,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :get_language
-
+  
   private
-
+  
   def get_language
+    session[:start] = true
     languages = ['pt-BR', 'en-US', 'es-ES']
     language = request.env['PATH_INFO'].gsub('/', '')
 
