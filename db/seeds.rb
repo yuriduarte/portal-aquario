@@ -40,7 +40,7 @@ tank1.researches.create(
   description_en_us: 'The tentacles of the jellyfish and caravels (cnidarians) have stinging cells (nematocysts) containing paralyzing toxins in smaller prey, but on the human skin they cause redness and pain. The study addresses the development of a protector to prevent these urticating cells from penetrating the skin and inoculating the venom, thereby preventing people from being burned by the animal.',
   description_es_es: 'Los tentáculos de las aguas vivas y carabelas (cnidarios) poseen células urticantes (nematocistos) que contienen toxinas con efecto paralizante en presas menores, pero que en la piel humana provocan enrojecimiento y dolor. El estudio aborda el desarrollo de un protector para evitar que esas células urticantes consigan penetrar en la piel e inocular la pinza, evitando, consecuentemente, que las personas sean quemadas por el animal.',
   author: ["Bruna Marschner (TCC)"], 
-  image: 'aguaviva.png'
+  image: 'tanques/desk/1-aguas-vivas/agua-viva.jpg'
 )
 tank3.researches.create(
   title_pt_br: 'Experimentos anti-incrustação e de intolerância a diferentes temperaturas da água em cracas nativas e invasoras.', 
