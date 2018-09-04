@@ -1,15 +1,5 @@
-<div class="container header">
-  <div class="row">
-    <div class="col mt-5">
-      <%= link_to "/" do %>
-        <%= image_tag "logo.png", class: 'logo' %>  
-      <% end %>
-    </div>    
-  </div>
-</div>
-
 <div class="container">
-  <h4 class="text-center titulo-pesquisa"><%= @tank.name(:language) %></h4>
+  <h4 class="text-center titulo-pesquisa"><%= @tank.name(language) %></h4>
   <div class="card-deck">
     <% @researches.each do |r| %>
       <div class="card cartao">
@@ -25,6 +15,6 @@
     <% end %>
     <div class="header mb-5">
       <%= link_to 'Voltar', researches_path, class: 'botao bt-home' %>  
-    </div>       
+    </div>     
   </div>  
 </div>
