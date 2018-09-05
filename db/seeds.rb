@@ -50,7 +50,7 @@ tank3.researches.create(
   description_en_us: 'The study is a pioneer in the development of a protocol for the cultivation of native and invasive species of barn of the genus Megabalanus, common in ships and oil platforms. Its purpose is to test antifouling agents in larvae and the survival of adults submitted to different water temperatures. These results will be of interest to different industries, and will allow better guidance on the control, maintenance and eradication of invasive species.',
   description_es_es: 'El estudio es pionero en el desarrollo de un protocolo de cultivo de especies nativas e invasoras de fracasos del género Megabalanus, común en buques y plataformas de petróleo. Tiene como propósito probar agentes anti-incrustantes en las larvas y la supervivencia de adultos sometidos a diferentes temperaturas del agua. Estos resultados serán de interés para diferentes industrias, y permitirán una mejor orientación en cuanto al control, mantenimiento y erradicación de especies invasoras.',
   author: ["Mauricio Peixoto Scapolatempore, MSc. (Projeto de Doutorado)"],
-  image: ''
+  image: 'tanques/desk/3-praias-arenosas-invasao-biologica/invasao-biologica.jpg'
 )
 tank12.researches.create(
   title_pt_br: 'Reprodução do tubarão-bambu Chiloscyllium punctatum.', 
@@ -60,7 +60,7 @@ tank12.researches.create(
   description_en_us: 'This work aims to generate a protocol on the reproduction of bamboo sharks (Chiloscyllium punctatum) in captivity, following the intervals between spawning, the period of embryo growth and, later, the growth of the pups in AquaRio',
   description_es_es: 'El trabajo que pretende generar un protocolo sobre la reproducción de tiburones de bambú (Chiloscyllium punctatum) en cautiverio, acompañando los intervalos entre las desovas, el período de crecimiento del embrión y, posteriormente, el crecimiento de los cachorros en el AquaRio',
   author: ["Fábio Sendin, BSc. (AquaRio)"],
-  image: ''
+  image: 'tanques/desk/12-tubaroes-e-raias-bebes/tub-peq.jpg'
 )
 tank13.researches.create(
   title_pt_br: 'Reprodução do tubarão-bambu Chiloscyllium punctatum.', 
@@ -70,7 +70,7 @@ tank13.researches.create(
   description_en_us: 'This work aims to generate a protocol on the reproduction of bamboo sharks (Chiloscyllium punctatum) in captivity, following the intervals between spawning, the period of embryo growth and, later, the growth of the pups in AquaRio',
   description_es_es: 'El trabajo que pretende generar un protocolo sobre la reproducción de tiburones de bambú (Chiloscyllium punctatum) en cautiverio, acompañando los intervalos entre las desovas, el período de crecimiento del embrión y, posteriormente, el crecimiento de los cachorros en el AquaRio',
   author: ["Fábio Sendin, BSc. (AquaRio)"],
-  image: ''
+  image: 'tanques/desk/13-tubaroes-de-pequeno-porte/peq-porte.jpg'
 )
 tank14.researches.create(
   title_pt_br: 'Reprodução do Hippocampus reidi em cativeiro.', 
@@ -80,7 +80,7 @@ tank14.researches.create(
   description_en_us: 'Research that aims to acquire knowledge about the best way of cultivating and developing the seahorse (Hippocampus reidi). The results may support new strategies for the conservation of this species, thus collaborating with the restoration of native fauna, in previous or future sites where this species is extinct.',
   description_es_es: 'Investigación que busca adquirir conocimientos sobre la mejor forma de cultivo y desarrollo del caballo marino (Hippocampus reidi). Los resultados podrán subsidiar nuevas estrategias para preservar esa especie, colaborando así con el restablecimiento de la fauna nativa, en lugares previos o futuros en que esta especie esté extinguida.',
   author: ["Miria Baracho", "Ingrid Alves (Monografia)"], 
-  image: 'formas.png'
+  image: 'tanques/desk/14-estrategias-biologicas-formas-do-corpo/formas-corpo.jpg'
 )
 tank21.researches.create(
   title_pt_br: 'Reprodução do peixe Elacatinus figaro.', 
@@ -90,7 +90,7 @@ tank21.researches.create(
   description_en_us: 'Study that aims the improvement of breeding in captivity of the Neon goby fish (Elacatinus figaro), through monitoring the development of their larvae. This species is endemic to our coast and it’s endangered to extinction.',
   description_es_es: 'Estudio que tiene como objetivo mejorar la reproducción en cautiverio del pescado Neon goby (Elacatinus fígaro), a través del acompañamiento del desarrollo de sus larvas. Esta especie es endémica de nuestro litoral y está amenazada de extinción.',
   author: ["Fabricio Nogueira", "Rafael Franco Valle (AquaRio)"],
-  image: ''
+  image: 'tanques/desk/21-corais-do-brasil/corais1.jpg'
 )
 tank21.researches.create(
   title_pt_br: 'Manipulação do microbioma de corais e BMCs (“Beneficial Microorganisms for Corals” - Microrganismos Benéficos de Corais) para recuperação e conservação de recifes',  
@@ -99,8 +99,8 @@ tank21.researches.create(
   description_pt_br: 'Estudo inovador que visa a proteger e recuperar recifes de corais do mundo inteiro ameaçados pelo branqueamento e outras doenças. A abordagem inovadora dessa pesquisa em andamento, que tem se mostrado extremamente sustentável e viável e que visa a proteger e recuperar recifes de corais do mundo inteiro ameaçados pelo branqueamento e outras doenças, estabelece a manipulação benéfica dos microbiomas naturais marinhos, que já estão lá e são nativos desses ecossistemas, para proteger esses ambientes coralinos.',
   description_en_us: 'An innovative study aimed at protecting and recovering coral reefs worldwide threatened by laundering and other diseases. The innovative approach to this ongoing research, which has proven to be extremely sustainable and feasible and aims to protect and recover coral reefs around the world threatened by laundering and other diseases, establishes the beneficial manipulation of marine natural microbiomes that are already there and are native to these ecosystems, to protect these coral environments.',
   description_es_es: 'Estudio innovador destinado a proteger y recuperar los arrecifes de coral de todo el mundo amenazados por el blanqueamiento y otras enfermedades. El enfoque innovador de esta investigación en marcha, que se ha mostrado extremadamente sostenible y viable y que tiene por objeto proteger y recuperar los arrecifes de coral de todo el mundo amenazados por el blanqueamiento y otras enfermedades, establece la manipulación benéfica de los microbiomas naturales marinos, que ya están allí y son nativos de esos ecosistemas, para proteger esos ambientes coralinos.',
-  author: ["Dr_pt_br. Gustavo Duarte (Projeto de Pós-Doutorado)", "Phillipe Rosado Magalhães (Tese de Doutorado)", "Erika Peçanha Santoro (Tese de Doutorado)", "Helena Dias Müller Villela (Tese de Doutorado)",  "Camila Messias (Monografia)."],
-  image: ''
+  author: ["Dr. Gustavo Duarte (Projeto de Pós-Doutorado)", "Phillipe Rosado Magalhães (Tese de Doutorado)", "Erika Peçanha Santoro (Tese de Doutorado)", "Helena Dias Müller Villela (Tese de Doutorado)",  "Camila Messias (Monografia)."],
+  image: 'tanques/desk/21-corais-do-brasil/corais2.jpg'
 )
 tank24.researches.create(
   title_pt_br: 'Avaliação hematológica dos animais do AquaRio.', 
@@ -110,7 +110,7 @@ tank24.researches.create(
   description_en_us: 'Little is known about the haematological characterization of many marine animals, especially fish and elasmobranchs. The objective of the research was to carry out a hematological evaluation of animals kept in captivity by AquaRio, in order to have sanitary control of the animals, to investigate hemoparasitoses, to diagnose possible diseases and to standardize hematological and biochemical values',
   description_es_es: 'Poco se sabe sobre la caracterización hematológica de muchos animales marinos, principalmente peces y elasmobránquios. La investigación tiene como objetivo hacer evaluación hematológica de los animales mantenidos en cautiverio por el AquaRio, para tener el control sanitario de los animales, investigar hemoparasitos, diagnosticar posibles enfermedades y estandarizar los valores hematológicos y bioquímicos',
   author: ["Lara Meyer (Tese de mestrado)"], 
-  image: 'oceanico.png'
+  image: 'tanques/desk/24-oceanico/oce1.jpg'
 )
 tank24.researches.create(
   title_pt_br: 'Caracterização do uso do espaço por peixes no tanque oceânico.', 
@@ -120,7 +120,7 @@ tank24.researches.create(
   description_en_us: 'In this study, we will identify the way in which the organisms in the oceanic tank of the AquaRio will be used in a three-dimensional scale, which will be divided in both depth and width and a set of photographic cameras equipped with motion sensors. These cameras will be installed in order to record the movement of the different species (and when possible of each individual, such as larger fish) for an uninterrupted period. The obtained data (photographs) will be worked and analyzed in order to identify if there are specific preferences and or individual.',
   description_es_es: 'En este estudio vamos a identificar la forma de uso del espacio, en una escala tridimensional, de los organismos presentes en el tanque oceánico del AquaRio, que será sectorizado, tanto en la profundidad, cuanto en la anchura y un conjunto de cámaras fotográficas, equipadas con sensores de movimiento. Estas cámaras se instalarán para registrar el movimiento de las distintas especies (y cuando sea posible de cada individuo, como de los peces de mayor porte) por un período ininterrumpido. Los datos obtenidos (fotografías) van a ser trabajados y analizados para identificar si existen preferencias específicas o individuales.',
   author: ["Prof. Dr. Marcelo Vianna (Laboratório de Biologia e Tecnologia Pesqueira – UFRJ)"], 
-  image: 'oceanico.png'
+  image: 'tanques/desk/24-oceanico/oce2.jpg'
 )
 tank24.researches.create(
   title_pt_br: 'Diversidade microbiana em raias costeiras', 
@@ -130,7 +130,7 @@ tank24.researches.create(
   description_en_us: 'Important research to study the "animal host ecosystem", also called microbioma, with the objective of providing important information to deal with secondary infections in man and to favor the maintenance of the health of these streaks.',
   description_es_es: 'Importante investigación para estudiar el "ecosistema hospedero animal", también llamado microbioma, con el objetivo de proporcionar informaciones importantes para lidiar con infecciones secundarias en el hombre y para favorecer el mantenimiento de la salud de esas rayas.',
   author: ['Mestranda Fernanda Golçalves e Silva (Dissertação de Doutorado)'], 
-  image: 'oceanico.png'
+  image: 'tanques/desk/24-oceanico/oce3.jpg'
 )
 tank24.researches.create(
   title_pt_br: 'Morfologia do embrião de raia-elétrica Narcine brasilienses.', 
@@ -140,7 +140,7 @@ tank24.researches.create(
   description_en_us: 'This work aims to describe the embryonic morphology of the electric streak Narcine brasilienses, identifying stages of development throughout pregnancy, seeking sexual dimorphism between males and females, and comparing the different growth stages from the embryo, neonate to the adult individual.',
   description_es_es: 'El trabajo que busca describir la morfología del embrión de la raya-eléctrica Narcine brasilienses, identificando las etapas del desarrollo a lo largo de la gestación, buscando dimorfismo sexual entre machos y hembras y comparando las diferentes etapas de crecimiento desde el embrión, neonato hasta el individuo adulto.',
   author: ['Ana Carolina Pereira dos Santos (Monografia de Iniciação Científica)'], 
-  image: 'oceanico.png'
+  image: 'tanques/desk/24-oceanico/oce4.jpg'
 )
 tank24.researches.create(
   title_pt_br: 'Transferência de mircobiota materna.', 
@@ -150,5 +150,5 @@ tank24.researches.create(
   description_en_us: 'New research with rays and sharks in order to identify if there is in the elasmobranchs the transference of the maternal microbiota, that is, the living bacteria to the pups, as it occurs in mammals, or if the microbiota is acquired after birth.',
   description_es_es: 'La investigación inédita con rayas y tiburones con el fin de identificar si hay en los elasmobranquios la transferencia de la microbiota materna, o sea, las bacterias que habitan el ser vivo, para los cachorros, así como ocurre en los mamíferos, o si la microbiota es adquirida después del " nacimiento.',
   author: ['Prof. Dr. Marcelo Vianna (Laboratório de Biologia e Tecnologia Pesqueira – UFRJ), Profa Dra Raquel S. Peixoto e Prof. Dr. Alexandre Rosado (Laboratório de Ecologia Microbiana Molecular – UFRJ).'], 
-  image: 'oceanico.png'
+  image: 'tanques/desk/24-oceanico/oce5.jpg'
 )
