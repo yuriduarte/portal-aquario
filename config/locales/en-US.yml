@@ -1,4 +1,11 @@
 en-US:
+  home:
+    buttons:
+      research: 'Researches'
+      guidetour: 'Guide Tour'
+      circuitmap: 'Circuit Map'
+      extraactivities: 'Extra activities'
+      back: 'Back'
   strings:
     search: 'Search'
   activerecord:

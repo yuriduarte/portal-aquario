@@ -1,4 +1,11 @@
 pt-BR:
+  home:
+    buttons:
+      research: 'Pesquisas'
+      guidetour: 'Visita Guiada'
+      circuitmap: 'Mapa do Circuito'
+      extraactivities: 'Atividades Extras'
+      back: 'Voltar'
   strings:
     search: 'Pesquisa'
   activerecord:

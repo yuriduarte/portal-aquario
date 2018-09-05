@@ -1,4 +1,11 @@
 es-ES:
+  home:
+    buttons:
+      research: 'Búsquedas'
+      guidetour: 'Visita Guiada'
+      circuitmap: 'Mapa del Circuito'
+      extraactivities: 'Actividades Extras'
+      back: 'Regreso'
   strings:
     search: 'Teste'
   activerecord:

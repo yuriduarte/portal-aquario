@@ -3,14 +3,14 @@
 <% end %>
 
 <div class="header mb">
-  <%= link_to 'Pesquisas', researches_path, class: 'botao bt-home' %> 
+  <%= link_to t('home.buttons.research'), researches_path, class: 'botao bt-home' %> 
   <!--<%= link_to 'Visita Guiada', guidedtour_index_path, class: 'botao bt-home disabled', disabled:true %>--> 
   <!--<%= link_to 'Mapa do Circuito', researches_path, class: 'botao bt-home disabled', disabled:true %>-->
   <!--<%= link_to 'Atividades Extras', researches_path, class: 'botao bt-home disabled', disabled:true %>-->
   
   <!-- Button trigger modal -->
   <button type="button" class="botao bt-home disabled" data-toggle="modal" data-target="#exampleModalCenter">
-    Visita Guiada
+    <%= t('home.buttons.guidetour') %>
   </button>
 
   <!-- Modal -->
@@ -32,7 +32,7 @@
 
   <!-- Button trigger modal -->
   <button type="button" class="botao bt-home disabled" data-toggle="modal" data-target="#mapadocircuito">
-    Mapa do Circuito
+    <%= t('home.buttons.circuitmap') %>
   </button>
 
   <!-- Modal -->
@@ -54,7 +54,7 @@
 
   <!-- Button trigger modal -->
   <button type="button" class="botao bt-home disabled" data-toggle="modal" data-target="#atividadesextras">
-    Atividades Extras
+    <%= t('home.buttons.extraactivities') %>
   </button>
 
   <!-- Modal -->
