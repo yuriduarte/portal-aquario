@@ -1,4 +1,6 @@
 class Tank < ApplicationRecord
+  mount_uploader :image, ImageUploader
+
   has_many :researches
 
   def name(language)

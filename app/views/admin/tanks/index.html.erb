@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Tanks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">
+        Título
+      </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tanks.each do |tank| %>
+      <tr>
+        <td><%= tank.name_pt_br %></td>
+        <td><%= link_to 'Show', [:admin, tank] %></td>
+        <td><%= link_to 'Edit', edit_admin_tank_path(tank) %></td>
+        <td><%= link_to 'Destroy', [:admin, tank], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Tank', new_admin_tank_path %>

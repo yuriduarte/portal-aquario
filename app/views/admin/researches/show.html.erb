@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  Título pt-br
+  <%= @research.tank.name_pt_br %>
+</p>
+
+<p>
+  Título pt-br
+  <%= @research.title_pt_br %>
+</p>
+
+<p>
+  Título en-us
+  <%= @research.title_en_us %>
+</p>
+
+<p>
+  Título es-es
+  <%= @research.title_es_es %>
+</p>
+
+<p>
+  Descrição pt-br
+  <%= @research.description_pt_br %>
+</p>
+
+<p>
+  Descrição en-us
+  <%= @research.description_en_us %>
+</p>
+
+<p>
+  Descrição es-es
+  <%= @research.description_es_es %>
+</p>
+
+<p>
+  Autor
+  <%= @research.author.join(', ') %>
+</p>
+
+<p>
+  <%= image_tag(@research.image.url(:research), class: 'card-img-top') %>
+</p>
+
+<%= link_to 'Edit', edit_admin_research_path(@research) %> |
+<%= link_to 'Back', admin_researches_path %>

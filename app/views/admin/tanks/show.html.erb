@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  Nome pt-br
+  <%= @tank.name_pt_br %>
+</p>
+<p>
+  Nome en-us
+  <%= @tank.name_en_us %>
+</p>
+<p>
+  Nome es-es
+  <%= @tank.name_es_es %>
+</p>
+<p>
+  Ordem
+  <%= @tank.order %>
+</p>
+
+<p>
+  <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top') %>
+</p>
+<%= link_to 'Edit', edit_admin_tank_path(@tank) %> |
+<%= link_to 'Back', admin_tanks_path %>

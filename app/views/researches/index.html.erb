@@ -2,15 +2,14 @@
   <%= stylesheet_link_tag 'researches' %>
 <% end %>
 <div class="">
-  <%= link_to '', root_path, class: 'voltar' %>  
+  <%= link_to '', root_path, class: 'voltar' %>
 </div>
 
 <div class="mb">
-  <% @tanks.each do |t| %>    
+  <% @tanks.each do |t| %>
       <li class="header">
         <%= link_to t.name(language), research_path(t.id), class: 'botao bt-home bt-pesquisa' %>
-      </li>    
+      </li>
   <% end %>
 </div>
-<% session[:language] %> 
-
+<% session[:language] %>

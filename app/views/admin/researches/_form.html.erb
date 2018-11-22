@@ -1,0 +1,65 @@
+<%= form_for([:admin, research]) do |f| %>
+  <% if research.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(research.errors.count, "error") %> prohibited this research from being saved:</h2>
+
+      <ul>
+      <% research.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :tank_id %>
+    <%= f.select :tank_id, Tank.order(:order).map{ |t| [t.name_pt_br, t.id] } %>
+  </div>
+
+  <div>
+    <%= f.label :title_pt_br %>
+    <%= f.text_field :title_pt_br %>
+  </div>
+
+  <div>
+    <%= f.label :title_en_us %>
+    <%= f.text_field :title_en_us %>
+  </div>
+
+  <div>
+    <%= f.label :title_es_es %>
+    <%= f.text_field :title_es_es %>
+  </div>
+
+  <div>
+    <%= f.label :description_pt_br %>
+    <%= f.text_field :description_pt_br %>
+  </div>
+
+  <div>
+    <%= f.label :description_en_us %>
+    <%= f.text_field :description_en_us %>
+  </div>
+
+  <div>
+    <%= f.label :description_es_es %>
+    <%= f.text_field :description_es_es %>
+  </div>
+
+  <div>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+  </div>
+
+  <div>
+    <%= f.label :image %>
+    <br>
+    <%= f.file_field :image %>
+    <br>
+    <%= image_tag(@research.image.url(:thumb), class: 'card-img-top')%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,7 +1,14 @@
 class AdminController < ApplicationController
-  
-  def admin
-    
+  before_action :http_authenticate
+
+  layout false
+
+  private
+
+  def http_authenticate
+    # return true unless Rails.env == 'production'
+    authenticate_or_request_with_http_basic do |username, password|
+      username == 'uu' && password == 'pp'
+    end
   end
-  
 end

@@ -3,7 +3,7 @@
   <div class="card-deck">
     <% @researches.each do |r| %>
       <div class="card cartao">
-        <%= image_tag(r.image || 'sem-imagem.jpeg', class: 'card-img-top')%>
+        <%= image_tag(r.image.url(:research), class: 'card-img-top')%>
         <div class="card-body">
           <h5 class="card-title text-center"><%= r.title(language) %></h5><hr>
           <p class="card-text"><%= r.description(language) %></p>
@@ -14,7 +14,7 @@
       </div>
     <% end %>
     <div class="header mb-5">
-      <%= link_to t('home.buttons.back'), researches_path, class: 'botao bt-home' %>  
-    </div>     
-  </div>  
+      <%= link_to t('home.buttons.back'), researches_path, class: 'botao bt-home' %>
+    </div>
+  </div>
 </div>

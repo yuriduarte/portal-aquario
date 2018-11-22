@@ -1,0 +1,45 @@
+<%= form_for([:admin, tank]) do |f| %>
+  <% if tank.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tank.errors.count, "error") %> prohibited this tank from being saved:</h2>
+
+      <ul>
+      <% tank.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= f.label :name_pt_br %>
+    <%= f.text_field :name_pt_br %>
+  </div>
+
+  <div>
+    <%= f.label :name_en_us %>
+    <%= f.text_field :name_en_us %>
+  </div>
+
+  <div>
+    <%= f.label :name_es_es %>
+    <%= f.text_field :name_es_es %>
+  </div>
+
+  <div>
+    <%= f.label :order %>
+    <%= f.text_field :order %>
+  </div>
+
+  <div>
+    <%= f.label :image %>
+    <br>
+    <%= f.file_field :image %>
+    <br>
+    <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top')%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
