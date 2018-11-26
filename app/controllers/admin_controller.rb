@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
   before_action :http_authenticate
 
-  layout false
+  layout 'admin'
 
   private
 
