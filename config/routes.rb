@@ -14,4 +14,8 @@ Rails.application.routes.draw do
   get '/pt-BR', to: 'home#index', as: :pt_br
   get '/en-US', to: 'home#index', as: :en_us
   get '/es-ES', to: 'home#index', as: :es_es
+
+  get '/pesquisas', to: 'researches#index'
+  get '/visitaguiada', to: 'guidedtour#index'
+
 end
