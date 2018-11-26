@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20181122010913) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "admin_researches", force: :cascade do |t|
+  create_table "guidedtours", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

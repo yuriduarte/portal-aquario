@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Admin Tanks</h1>
+<h1>Administrador dos Tanques</h1>
 
 <table>
   <thead>
@@ -15,9 +15,9 @@
     <% @tanks.each do |tank| %>
       <tr>
         <td><%= tank.name_pt_br %></td>
-        <td><%= link_to 'Show', [:admin, tank] %></td>
-        <td><%= link_to 'Edit', edit_admin_tank_path(tank) %></td>
-        <td><%= link_to 'Destroy', [:admin, tank], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', [:admin, tank] %></td>
+        <td><%= link_to 'Editar', edit_admin_tank_path(tank) %></td>
+        <td><%= link_to 'Deletar', [:admin, tank], method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Admin Tank', new_admin_tank_path %>
+<%= link_to 'Novo Tanque', new_admin_tank_path %>

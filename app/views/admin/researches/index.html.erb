@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Admin Researches</h1>
+<h1>Administrador de Pesquisas</h1>
 
 <table>
   <thead>
@@ -15,9 +15,9 @@
     <% @researches.each do |research| %>
       <tr>
         <td><%= research.title_pt_br %></td>
-        <td><%= link_to 'Show', [:admin, research] %></td>
-        <td><%= link_to 'Edit', edit_admin_research_path(research) %></td>
-        <td><%= link_to 'Destroy', [:admin, research], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', [:admin, research] %></td>
+        <td><%= link_to 'Editar', edit_admin_research_path(research) %></td>
+        <td><%= link_to 'Deletar', [:admin, research], method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -25,4 +25,4 @@
 
 <br>
 
-<%= link_to 'New Admin Research', new_admin_research_path %>
+<%= link_to 'Nova Pesquisa', new_admin_research_path %>
