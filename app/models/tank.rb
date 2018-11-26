@@ -7,4 +7,10 @@ class Tank < ApplicationRecord
     language = language.downcase.gsub('-', '_')
     self.send("name_#{language}")
   end
+
+  def description(language)
+    language = language.downcase.gsub('-','_')
+    self.send("description_#{language}")
+  end
+  
 end

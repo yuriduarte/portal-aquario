@@ -1,11 +1,10 @@
 <div class="container">
-  <h4 class="text-center titulo-pesquisa"><%= @tank.name_pt_br %></h4>
+  <h4 class="text-center titulo-pesquisa"><%= @tank.name(language) %></h4>
   <div class="card-deck">
       <div class="catd cartao">
         <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
-
         <div class="card-body">
-          <p class="card-text"><%= @tank.description_pt_br %></p>
+          <p class="card-text"><%= @tank.description(language) %></p>
         </div>
       </div>
       <div class="header mb-5">

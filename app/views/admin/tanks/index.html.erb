@@ -1,28 +1,34 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Administrador dos Tanques</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th colspan="3">
-        Título
-      </th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @tanks.each do |tank| %>
-      <tr>
-        <td><%= tank.name_pt_br %></td>
-        <td><%= link_to 'Mostrar', [:admin, tank] %></td>
-        <td><%= link_to 'Editar', edit_admin_tank_path(tank) %></td>
-        <td><%= link_to 'Deletar', [:admin, tank], method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'Novo Tanque', new_admin_tank_path %>
+<div class="container-fluid">
+  <div class="row">    
+    <div class="btn-novo-tanque">
+    <h1>Administrador de Tanques</h1>      
+    </div>
+    <div class="">
+      <%= link_to 'Novo Tanque', new_admin_tank_path, class:'btn btn-primary' %>
+      <%= link_to 'Voltar', admin_path, class:'btn btn-primary' %>
+    </div>    
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Ordem</th>
+          <th scope="col">Tanques</th>
+          <th scope="col"></th>
+          <th scope="col"></th>   
+          <th scope="col"></th>   
+        </tr>
+      </thead>
+      <tbody>
+        <% @tanks.each do |tank| %>
+        <tr>
+          <th scope="row"><%= tank.order %></th>
+          <td><%= tank.name_pt_br %></td>
+            <td><%= link_to 'Mostrar', [:admin, tank], class:'btn btn-primary' %></td>
+            <td><%= link_to 'Editar', edit_admin_tank_path(tank), class:'btn btn-info'%></td>
+            <td><%= link_to 'Deletar', [:admin, tank], method: :delete, data: { confirm: 'Tem certeza?' }, class:'btn btn-danger' %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>  
+</div>

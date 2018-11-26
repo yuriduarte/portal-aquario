@@ -1,6 +1,8 @@
-<h1>Editando Tanque</h1>
+<div class="container-fluid">
+  <h1>Editando Tanque</h1>
+</div>
 
 <%= render 'form', tank: @tank %>
 
-<%= link_to 'Mostrar', [:admin, @tank] %> |
-<%= link_to 'Voltar', admin_tanks_path %>
+<%= link_to 'Mostrar', [:admin, @tank], class:'btn btn-primary btn-back' %>
+<%= link_to 'Voltar', admin_tanks_path, class:'btn btn-primary btn-back' %>

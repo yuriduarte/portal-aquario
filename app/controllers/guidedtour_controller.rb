@@ -1,6 +1,6 @@
 class GuidedtourController < ApplicationController
   def index
-    @tanks = Tank.all
+    @tanks = Tank.order(:order)
   end
 
   def show

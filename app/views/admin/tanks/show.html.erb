@@ -1,41 +1,70 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
+<form>
+  <div class="row mb-2">
+    <div class="col-2">
+      Nome em Português:
+    </div>
+    <div class="col-3">            
+      <%= @tank.name_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Nome em Inglês:
+    </div>
+    <div class="col-3">            
+      <%= @tank.name_en_us %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Nome em Espanhol:
+    </div>
+    <div class="col-3">            
+      <%= @tank.name_es_es %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Português:
+    </div>
+    <div class="col-3">            
+      <%= @tank.description_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Inglês:
+    </div>
+    <div class="col-3">            
+      <%= @tank.description_en_us %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Espanhol:
+    </div>
+    <div class="col-3">            
+      <%= @tank.description_es_es %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Ordem do tanque:
+    </div>
+    <div class="col-3">            
+      <%= @tank.order %>
+    </div>
+  </div>
+</form>
 
-<p>
-  Nome em Protuguês:
-  <%= @tank.name_pt_br %>
-</p>
-<p>
-  Nome em Inglês:
-  <%= @tank.name_en_us %>
-</p>
-<p>
-  Nome em Espanhol:
-  <%= @tank.name_es_es %>
-</p>
-
-<p>
-  Descrição em Protuguês:
-  <%= @tank.description_pt_br %>
-</p>
-
-<p>
-  Descrição em Inglês:
-  <%= @tank.description_en_us %>
-</p>
-
-<p>
-  Descrição em Espanhol:
-  <%= @tank.description_es_es %>
-</p>
-
-<p>
-  Ordem do tanque:
-  <%= @tank.order %>
-</p>
-
-<p>
+<div class="col-3">  
   <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top') %>
-</p>
-<%= link_to 'Edit', edit_admin_tank_path(@tank) %> |
-<%= link_to 'Back', admin_tanks_path %>
+</div>
+
+<%= link_to 'Editar', edit_admin_tank_path(@tank), class:'btn btn-primary btn-back' %> 
+<%= link_to 'Voltar', admin_tanks_path, class:'btn btn-primary btn-back' %>
+  
+</div>

@@ -8,7 +8,7 @@ class AdminController < ApplicationController
   def http_authenticate
     # return true unless Rails.env == 'production'
     authenticate_or_request_with_http_basic do |username, password|
-      username == 'uu' && password == 'pp'
+      username == 'admin' && password == 'educacao@aquario'
     end
   end
 end

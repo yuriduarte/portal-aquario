@@ -1,5 +1,12 @@
-<h1>New Admin Tank</h1>
+<div class="container-fluid">
+  <h1>Criação de Tanque</h1>
+</div>
 
 <%= render 'form', tank: @tank %>
 
-<%= link_to 'Voltar', admin_tanks_path %>
+<div class="container-fluid">
+  <div class="row">
+    <%= link_to 'Voltar', admin_tanks_path, class:'btn btn-primary btn-back' %>  
+  </div>  
+</div>
+

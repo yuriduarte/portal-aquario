@@ -4,7 +4,7 @@ class Admin::TanksController < AdminController
   # GET /admin/tanks
   # GET /admin/tanks.json
   def index
-    @tanks = Tank.all
+    @tanks = Tank.order(:order)
   end
 
   # GET /admin/tanks/1
@@ -65,6 +65,6 @@ class Admin::TanksController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tank_params
-      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image)
+      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image, :description_pt_br, :description_es_es, :description_en_us)
     end
 end

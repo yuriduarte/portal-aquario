@@ -1,7 +1,7 @@
 <%= form_for([:admin, tank]) do |f| %>
   <% if tank.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(tank.errors.count, "error") %> prohibited this tank from being saved:</h2>
+      <h2><%= pluralize(tank.errors.count, "error") %> proibiu que este tanque fosse salvo:</h2>
 
       <ul>
       <% tank.errors.full_messages.each do |message| %>
@@ -11,50 +11,77 @@
     </div>
   <% end %>
 
-  <div>
-    <%= f.label :name_pt_br %>
-    <%= f.text_field :name_pt_br %>
-  </div>
+  <div class="container-fluid">
+    <form>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :name_pt_br %>            
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :name_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :name_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :name_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :name_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :name_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_pt_br %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_pt_br, class:'form-control', placeholder:'Digite uma descrição em Português...' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_en_us, class:'form-control', placeholder:'Digite uma descrição em Inglês...' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_es_es %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_es_es, class:'form-control', placeholder:'Digite uma descrição em Espanhol...' %>            
+        </div>
+      </div>
+      <div class="form-group row mb-2">
+        <div class="col-2">
+          <label for="exampleFormControlSelect1"><%= f.label :order %></label>            
+        </div>
+        <div class="col-3">
+          <%= f.text_field :order, class:'form-control', placeholder:'Digite a ordem do tanque Ex: 1 (para primeiro)' %>
+        </div>          
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :image %>
+        </div>
+        <div class="col-3">            
+          <%= f.file_field :image %> <br>
+          <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top')%>  
+        </div>          
+      </div>
+    </form>
 
-  <div>
-    <%= f.label :name_en_us %>
-    <%= f.text_field :name_en_us %>
-  </div>
-
-  <div>
-    <%= f.label :name_es_es %>
-    <%= f.text_field :name_es_es %>
-  </div>
-
-  <div>
-    <%= f.label :description_pt_br %>
-    <%= f.text_field :description_pt_br %>
-  </div>
-
-  <div>
-    <%= f.label :description_en_us %>
-    <%= f.text_field :description_en_us %>
-  </div>
-
-  <div>
-    <%= f.label :description_es_es %>
-    <%= f.text_field :description_es_es %>
-  </div>
-
-  <div>
-    <%= f.label :order %>
-    <%= f.text_field :order %>
-  </div>
-
-  <div>
-    <%= f.label :image %>
-    <br>
-    <%= f.file_field :image %>
-    <br>
-    <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top')%>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <%= f.submit 'Criar', class:'btn btn-primary' %>
+    </div>    
   </div>
 <% end %>
