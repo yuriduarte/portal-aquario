@@ -1,7 +1,7 @@
 <div class="container">
   <h4 class="text-center titulo-pesquisa"><%= @tank.name(language) %></h4>
   <div class="card-deck">
-      <div class="catd cartao">
+      <div class="card cartao">
         <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
         <div class="card-body">
           <p class="card-text"><%= @tank.description(language) %></p>
