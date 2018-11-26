@@ -11,55 +11,84 @@
     </div>
   <% end %>
 
-  <div>
-    <%= f.label :tank_id %>
-    <%= f.select :tank_id, Tank.order(:order).map{ |t| [t.name_pt_br, t.id] } %>
-  </div>
-
-  <div>
-    <%= f.label :title_pt_br %>
-    <%= f.text_field :title_pt_br %>
-  </div>
-
-  <div>
-    <%= f.label :title_en_us %>
-    <%= f.text_field :title_en_us %>
-  </div>
-
-  <div>
-    <%= f.label :title_es_es %>
-    <%= f.text_field :title_es_es %>
-  </div>
-
-  <div>
-    <%= f.label :description_pt_br %>
-    <%= f.text_field :description_pt_br %>
-  </div>
-
-  <div>
-    <%= f.label :description_en_us %>
-    <%= f.text_field :description_en_us %>
-  </div>
-
-  <div>
-    <%= f.label :description_es_es %>
-    <%= f.text_field :description_es_es %>
-  </div>
-
-  <div>
-    <%= f.label :author %>
-    <%= f.text_field :author %>
-  </div>
-
-  <div>
-    <%= f.label :image %>
-    <br>
-    <%= f.file_field :image %>
-    <br>
-    <%= image_tag(@research.image.url(:thumb), class: 'card-img-top')%>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+  <div class="container-fluid">
+    <form>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :tank_id %>
+        </div>
+        <div class="col-3">            
+          <%= f.select :tank_id, Tank.order(:order).map{ |t| [t.name_pt_br, t.id] }, class:'form-control', placeholder:'Ex: Águas Vivas' %>
+        </div>
+      </div>            
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_pt_br %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :title_pt_br, class:'form-control' %>
+        </div>      
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :title_en_us, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_es_es %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :title_es_es, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_pt_br %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_pt_br, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_en_us, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :description_es_es %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_area :description_es_es, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :author %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :author, class:'form-control' %>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :image %>
+        </div>
+        <div class="col-3">            
+          <%= f.file_field :image %> <br>
+          <%= image_tag(@research.image.url(:thumb), class: 'card-img-top')%>  
+        </div>          
+      </div>
+    </form>
+    <div class="actions">
+      <%= f.submit 'Criar', class:'btn btn-success' %>
+    </div>
   </div>
 <% end %>

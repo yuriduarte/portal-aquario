@@ -1,48 +1,78 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  Título pt-br
-  <%= @research.tank.name_pt_br %>
-</p>
+<form>
+  <div class="row mb-2">
+    <div class="col-2">
+      Nome do Tanque:
+    </div>
+    <div class="col-3">            
+      <%= @research.tank.name_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Português:
+    </div>
+    <div class="col-3">            
+      <%= @research.title_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Inglês:
+    </div>
+    <div class="col-3">            
+      <%= @research.title_en_us %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Espanhol:
+    </div>
+    <div class="col-3">            
+      <%= @research.title_es_es %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Português:
+    </div>
+    <div class="col-3">            
+      <%= @research.description_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Ingles:
+    </div>
+    <div class="col-3">            
+      <%= @research.description_en_us %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Descrição em Espanhol:
+    </div>
+    <div class="col-3">            
+      <%= @research.description_es_es %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Autor:
+    </div>
+    <div class="col-3">            
+      <%= @research.author.join(', ') %>
+    </div>
+  </div>
+</form>
 
-<p>
-  Título pt-br
-  <%= @research.title_pt_br %>
-</p>
-
-<p>
-  Título en-us
-  <%= @research.title_en_us %>
-</p>
-
-<p>
-  Título es-es
-  <%= @research.title_es_es %>
-</p>
-
-<p>
-  Descrição pt-br
-  <%= @research.description_pt_br %>
-</p>
-
-<p>
-  Descrição en-us
-  <%= @research.description_en_us %>
-</p>
-
-<p>
-  Descrição es-es
-  <%= @research.description_es_es %>
-</p>
-
-<p>
-  Autor
-  <%= @research.author.join(', ') %>
-</p>
-
-<p>
+<div class="col-3">  
   <%= image_tag(@research.image.url(:research), class: 'card-img-top') %>
-</p>
+</div>
 
-<%= link_to 'Editar', edit_admin_research_path(@research) %> |
-<%= link_to 'Voltar', admin_researches_path %>
+<%= link_to 'Editar', edit_admin_research_path(@research), class:'btn btn-primary btn-back' %>
+<%= link_to 'Voltar', admin_researches_path, class:'btn btn-primary btn-back' %>
+
+</div>

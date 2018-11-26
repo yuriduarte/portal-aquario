@@ -1,6 +1,8 @@
-<h1>Editando Pesquisa</h1>
+<div class="container-fluid">
+  <h1>Editando Pesquisa</h1>
+</div>
 
 <%= render 'form', research: @research %>
 
-<%= link_to 'Mostrar', [:admin, @research] %> |
-<%= link_to 'Voltar', admin_researches_path %>
+<%= link_to 'Mostrar', [:admin, @research], class:'btn btn-primary btn-back' %>
+<%= link_to 'Voltar', admin_researches_path, class:'btn btn-primary btn-back' %>
