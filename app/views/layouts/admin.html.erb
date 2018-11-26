@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PortalAquario</title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= stylesheet_link_tag    'admin', media: 'all' %>
+    <%= yield(:head) %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_include_tag 'admin' %>
+    <%= yield(:footer) %>
+  </body>
+</html>
