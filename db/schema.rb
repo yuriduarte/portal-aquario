@@ -10,15 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181122000656) do
+ActiveRecord::Schema.define(version: 20181127182208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "guidedtours", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "researches", force: :cascade do |t|
     t.integer  "tank_id",                        null: false
@@ -40,9 +35,15 @@ ActiveRecord::Schema.define(version: 20181122000656) do
     t.string   "name_en_us"
     t.string   "name_es_es"
     t.integer  "order"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.string   "image"
+    t.string   "description_pt_br"
+    t.string   "description_en_us"
+    t.string   "description_es_es"
+    t.string   "title_pt_br"
+    t.string   "title_en_us"
+    t.string   "title_es_es"
   end
 
 end

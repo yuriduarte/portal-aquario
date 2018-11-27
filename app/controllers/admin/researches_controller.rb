@@ -4,7 +4,7 @@ class Admin::ResearchesController < AdminController
   # GET /admin/researches
   # GET /admin/researches.json
   def index
-    @researches = Research.all
+    @researches = Research.includes(:tank)
   end
 
   # GET /admin/researches/1

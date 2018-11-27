@@ -26,6 +26,32 @@
       <%= @tank.name_es_es %>
     </div>
   </div>
+
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Português:
+    </div>
+    <div class="col-3">            
+      <%= @tank.title_pt_br %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Inglês:
+    </div>
+    <div class="col-3">            
+      <%= @tank.title_en_us %>
+    </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-2">
+      Título em Espanhol:
+    </div>
+    <div class="col-3">            
+      <%= @tank.title_es_es %>
+    </div>
+  </div>
+
   <div class="row mb-2">
     <div class="col-2">
       Descrição em Português:
@@ -66,5 +92,6 @@
 
 <%= link_to 'Editar', edit_admin_tank_path(@tank), class:'btn btn-primary btn-back' %> 
 <%= link_to 'Voltar', admin_tanks_path, class:'btn btn-primary btn-back' %>
+<%= link_to  "Visualizar como Usuário", guidedtour_path, class:'btn btn-success btn-back' %>
   
 </div>

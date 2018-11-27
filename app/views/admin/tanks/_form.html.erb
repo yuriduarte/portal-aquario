@@ -31,12 +31,38 @@
       </div>
       <div class="row mb-2">
         <div class="col-2">
-          <%= f.label :name_en_us %>
+          <%= f.label :name_es_es %>
         </div>
         <div class="col-3">            
           <%= f.text_field :name_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
         </div>
       </div>
+      
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_pt_br %>            
+        </div>
+          <div class="col-3">            
+          <%= f.text_field :title_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_en_us %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :title_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+          <%= f.label :title_es_es %>
+        </div>
+        <div class="col-3">            
+          <%= f.text_field :title_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
+        </div>
+      </div>
+
       <div class="row mb-2">
         <div class="col-2">
           <%= f.label :description_pt_br %>
@@ -81,7 +107,12 @@
     </form>
 
     <div class="actions">
-      <%= f.submit f.object.new_record? ? 'Criar' : 'Atualizar', class:'btn btn-success' %>
-    </div>    
+      <% if f.object.new_record? %>
+        <%= f.submit 'Criar', class:'btn btn-success' %>
+      <% else %>
+        <%= f.submit 'Atualizar', class:'btn btn-success' %>      
+        <%= link_to "Visualizar como Usuário", guidedtour_path(f.object.id), class:'btn btn-success' %>
+      <% end %>
+    </div>
   </div>
 <% end %>

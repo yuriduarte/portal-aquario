@@ -65,6 +65,6 @@ class Admin::TanksController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tank_params
-      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image, :description_pt_br, :description_es_es, :description_en_us)
+      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image, :description_pt_br, :description_es_es, :description_en_us, :title_pt_br, :title_en_us, :title_es_es)
     end
 end
