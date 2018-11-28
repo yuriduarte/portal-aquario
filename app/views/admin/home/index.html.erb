@@ -1,11 +1,29 @@
+<div class="container header">
+  <div class="row">
+    <div class="col mt-5 mb-5">
+      <%= link_to "/" do %>
+        <%= image_tag "logo/logo.png", class: 'logo' %>  
+      <% end %>
+    </div>    
+  </div>
+</div>
+
 <div class="container">
   <div class="row">
-    <div class="btn-novo-tanque mt-5">
-      <h1>Área Administrativa</h1>      
+    
+  </div>
+  
+  <div class="jumbotron text-center bg-gradient">
+    <div class="btn-novo-tanque mb-5">
+      <h1>AquaRio Marinho do Rio</h1>      
     </div>
-  </div>
-  <div class="">
+    <p class="lead">Seja bem vindo, essa é a plataforma de gerenciamento dos tanques e pesquisas.</p>
+    <hr class="my-4">
+    <p>Selecione a opção que deseja acessar.</p>
     <%= link_to "Tanques", admin_tanks_path, class: 'btn btn-primary btn-back' %>    
-    <%= link_to "Pesquisas", admin_researches_path, class: 'btn btn-primary btn-back' %>
-  </div>
+    <%= link_to "Pesquisas", admin_researches_path, class: 'btn btn-primary btn-back' %>  
+    <div>
+      <%= link_to "Voltar para a aplicação", "/", class: 'btn btn-success btn-back' %>   
+    </div>     
+  </div>  
 </div>

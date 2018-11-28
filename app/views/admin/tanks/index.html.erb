@@ -8,14 +8,11 @@
       <%= link_to 'Novo Tanque', new_admin_tank_path, class:'btn btn-primary' %>
       <%= link_to 'Voltar', admin_path, class:'btn btn-primary' %>
     </div>    
-    <table class="table table-hover">
+    <table class="table table-hover table-bordered">
       <thead>
         <tr>
           <th scope="col">Ordem</th>
           <th scope="col">Tanques</th>
-          <th scope="col"></th>
-          <th scope="col"></th>   
-          <th scope="col"></th>   
         </tr>
       </thead>
       <tbody>
@@ -23,10 +20,10 @@
         <tr>
           <th scope="row"><%= tank.order %></th>
           <td><%= tank.name_pt_br %></td>
-            <td><%= link_to 'Visualizar como Usuário', guidedtour_path(tank.id), class:'btn btn-success' %></td>
-            <td><%= link_to 'Mostrar', [:admin, tank], class:'btn btn-primary' %></td>
-            <td><%= link_to 'Editar', edit_admin_tank_path(tank), class:'btn btn-info'%></td>
-            <td><%= link_to 'Deletar', [:admin, tank], method: :delete, data: { confirm: 'Tem certeza?' }, class:'btn btn-danger' %></td>
+          <td class="col-1"><%= link_to 'Visualizar como Usuário', guidedtour_path(tank.id), class:'btn btn-success' %></td>
+          <td class="col-1"><%= link_to 'Mostrar', [:admin, tank], class:'btn btn-primary' %></td>
+          <td class="col-1"><%= link_to 'Editar', edit_admin_tank_path(tank), class:'btn btn-info'%></td>
+          <td class="col-1"><%= link_to 'Deletar', [:admin, tank], method: :delete, data: { confirm: 'Tem certeza?' }, class:'btn btn-danger' %></td>
         </tr>
         <% end %>
       </tbody>

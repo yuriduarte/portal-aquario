@@ -14,6 +14,35 @@
 
 @import "bootstrap";
 
+body {
+
+// background-color: #E4E4E1;
+// background-image: radial-gradient(at top center, rgba(255,255,255,0.03) 0%, rgba(0,0,0,0.03) 100%), linear-gradient(to top, rgba(255,255,255,0.1) 0%, rgba(143,152,157,0.60) 100%);
+// background-blend-mode: normal, multiply;
+
+  background: #C9CCD3;
+  background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+  background-blend-mode: lighten;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;    
+}
+
+.bg-gradient {
+ background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .btn-novo-tanque {
   margin: auto;
 }
@@ -24,3 +53,20 @@
   margin-bottom: 10px;
 }
 
+td, th { 
+  text-align: center;
+}
+
+.text-area {
+  height: 300px !important;
+}
+
+#research_tank_id {
+  display: block !important;
+}
+
+.img-tumb {
+  width: 45%;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}

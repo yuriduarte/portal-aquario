@@ -56,11 +56,22 @@ body{
   margin-bottom: 10%;
 }
 
+.logo-pesquisa {  
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 100%
+}
+
+.pesquisa {
+  width: 50%;
+}
+
 .header{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .mb{

@@ -2,6 +2,16 @@
   <%= stylesheet_link_tag 'home' %>
 <% end %>
 
+<div class="container header">
+      <div class="row">
+        <div class="col mt-5">
+          <%= link_to "/" do %>
+            <%= image_tag "logo/logo.png", class: 'logo' %>  
+          <% end %>
+        </div>    
+      </div>
+    </div>
+
 <div class="header mb">
   <%= link_to t('home.buttons.research'), researches_path, class: 'botao bt-home' %> 
   <!--<%= link_to 'Visita Guiada', guidedtour_index_path, class: 'botao bt-home disabled', disabled:true %>--> 

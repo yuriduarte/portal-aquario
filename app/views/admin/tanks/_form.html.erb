@@ -13,96 +13,60 @@
 
   <div class="container-fluid">
     <form>
-      <div class="row mb-2">
-        <div class="col-2">
-          <%= f.label :name_pt_br %>            
-        </div>
-        <div class="col-3">            
+      <div class="row mb-2">        
+        <div class="col-4">            
+          <%= f.label :name_pt_br %>  
           <%= f.text_field :name_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
         </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        <div class="col-4">            
           <%= f.label :name_en_us %>
-        </div>
-        <div class="col-3">            
           <%= f.text_field :name_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        </div>            
+        <div class="col-4">            
           <%= f.label :name_es_es %>
-        </div>
-        <div class="col-3">            
           <%= f.text_field :name_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
         </div>
       </div>
       
-      <div class="row mb-2">
-        <div class="col-2">
-          <%= f.label :title_pt_br %>            
-        </div>
-          <div class="col-3">            
+      <div class="row mb-2">        
+        <div class="col-4">            
+          <%= f.label :title_pt_br %>    
           <%= f.text_field :title_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        </div>       
+        <div class="col-4">            
           <%= f.label :title_en_us %>
-        </div>
-        <div class="col-3">            
           <%= f.text_field :title_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        </div>        
+        <div class="col-4">            
           <%= f.label :title_es_es %>
-        </div>
-        <div class="col-3">            
           <%= f.text_field :title_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
         </div>
       </div>
 
-      <div class="row mb-2">
-        <div class="col-2">
+      <div class="row mb-2">        
+        <div class="col-4">            
           <%= f.label :description_pt_br %>
+          <%= f.text_area :description_pt_br, class:'form-control text-area', placeholder:'Digite uma descrição em Português...' %>            
         </div>
-        <div class="col-3">            
-          <%= f.text_area :description_pt_br, class:'form-control', placeholder:'Digite uma descrição em Português...' %>            
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        <div class="col-4">            
           <%= f.label :description_en_us %>
+          <%= f.text_area :description_en_us, class:'form-control text-area', placeholder:'Digite uma descrição em Inglês...' %>            
         </div>
-        <div class="col-3">            
-          <%= f.text_area :description_en_us, class:'form-control', placeholder:'Digite uma descrição em Inglês...' %>            
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        <div class="col-4">            
           <%= f.label :description_es_es %>
-        </div>
-        <div class="col-3">            
-          <%= f.text_area :description_es_es, class:'form-control', placeholder:'Digite uma descrição em Espanhol...' %>            
+          <%= f.text_area :description_es_es, class:'form-control text-area', placeholder:'Digite uma descrição em Espanhol...' %>            
         </div>
       </div>
       <div class="form-group row mb-2">
-        <div class="col-2">
-          <label for="exampleFormControlSelect1"><%= f.label :order %></label>            
-        </div>
-        <div class="col-3">
-          <%= f.text_field :order, class:'form-control', placeholder:'Digite a ordem do tanque Ex: 1 (para primeiro)' %>
-        </div>          
-      </div>
-      <div class="row mb-2">
-        <div class="col-2">
+        <div class="col-4">            
           <%= f.label :image %>
-        </div>
-        <div class="col-3">            
           <%= f.file_field :image %> <br>
           <%= image_tag(@tank.image.url(:thumb), class: 'card-img-top')%>  
-        </div>          
+        </div>   
+        <div class="col-4">
+          <label for="exampleFormControlSelect1"><%= f.label :order %></label>            
+          <%= f.text_field :order, class:'form-control', placeholder:'Digite a ordem do tanque Ex: 1 (para primeiro)' %>
+        </div>        
       </div>
     </form>
 

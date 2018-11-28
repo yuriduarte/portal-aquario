@@ -1,6 +1,15 @@
 <%= content_for :head do %>
   <%= stylesheet_link_tag 'researches' %>
 <% end %>
+<div class="container header">
+  <div class="row pesquisa">
+    <div class="col mt-5">
+      <%= link_to "/" do %>
+        <%= image_tag "logo/logo_pesquisa.png", class: 'logo-pesquisa' %>  
+      <% end %>
+    </div>    
+  </div>
+</div>
 <div class="">
   <%= link_to '', root_path, class: 'voltar' %>
 </div>
