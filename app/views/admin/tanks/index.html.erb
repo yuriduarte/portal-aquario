@@ -19,7 +19,7 @@
         <% @tanks.each do |tank| %>
         <tr>
           <th scope="row"><%= tank.order %></th>
-          <td><%= tank.name_pt_br %></td>
+          <td class="col-3"><%= tank.name_pt_br %></td>
           <td class="col-1"><%= link_to 'Visualizar como Usuário', guidedtour_path(tank.id), class:'btn btn-success' %></td>
           <td class="col-1"><%= link_to 'Mostrar', [:admin, tank], class:'btn btn-primary' %></td>
           <td class="col-1"><%= link_to 'Editar', edit_admin_tank_path(tank), class:'btn btn-info'%></td>
