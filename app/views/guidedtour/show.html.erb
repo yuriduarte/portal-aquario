@@ -13,18 +13,25 @@
   <div class="card-deck">
     <div class="card cartao">
       <h5 class="card-title text-center mt-3 mr-2 ml-2"><%= @tank.title(language) %></h5><hr>
-      <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%><hr>
+      <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
       <div class="card-body">                    
-        <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p>
+        <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p><hr>
+        
+        <% @tank.species.each do |specy| %>        
+          <p class="card-text text-justify">
+            <b><%= specy.name(language) %></b>
+            <i><%= specy.scientific_name(language) %></i>            
+          </p>
+          <%= image_tag specy.image.url(:thumb), class: 'card-img-top mb-3' %>
+          <p>
+            <%= specy.title(language) %>
+            <%= specy.description(language) %>          
+          </p>          
+        <% end %>
+
       </div>
 
-      <% @tank.species.each do |specy| %>
-        <%= specy.name(language) %>
-        <%= specy.scientific_name(language) %>
-        <%= specy.title(language) %>
-        <%= specy.description(language) %>
-        <%= image_tag specy.image.url(:thumb) %>
-      <% end %>
+      
 
       <div class="bt">
         <% if @tank.researches.any? %>
