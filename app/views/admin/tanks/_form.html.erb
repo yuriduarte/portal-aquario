@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="container-fluid">
-    <form>
+    
       <div class="row mb-2">        
         <div class="col-4">            
           <%= f.label :name_pt_br %>  
@@ -68,7 +68,11 @@
           <%= f.text_field :order, class:'form-control', placeholder:'Digite a ordem do tanque Ex: 1 (para primeiro)' %>
         </div>        
       </div>
-    </form>
+    
+      <% Specy.order(:order).each do |specy| %>
+        <%= check_box_tag "tank[specy_ids][]", specy.id, tank.species.include?(specy) %> 
+        <%= specy.name_pt_br %>
+      <% end %>
 
     <div class="actions">
       <% if f.object.new_record? %>

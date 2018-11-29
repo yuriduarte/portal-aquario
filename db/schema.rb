@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181127182208) do
+ActiveRecord::Schema.define(version: 20181128234808) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,30 @@ ActiveRecord::Schema.define(version: 20181127182208) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.index ["tank_id"], name: "index_researches_on_tank_id", using: :btree
+  end
+
+  create_table "species", force: :cascade do |t|
+    t.string   "name_pt_br"
+    t.string   "name_en_us"
+    t.string   "name_es_es"
+    t.string   "scientific_name_pt_br"
+    t.string   "scientific_name_en_us"
+    t.string   "scientific_name_es_es"
+    t.text     "title_pt_br"
+    t.text     "title_en_us"
+    t.text     "title_es_es"
+    t.text     "description_pt_br"
+    t.text     "description_en_us"
+    t.text     "description_es_es"
+    t.string   "image"
+    t.integer  "order"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "species_tanks", id: false, force: :cascade do |t|
+    t.integer "specy_id", null: false
+    t.integer "tank_id",  null: false
   end
 
   create_table "tanks", force: :cascade do |t|

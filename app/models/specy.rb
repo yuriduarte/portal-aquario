@@ -1,8 +1,7 @@
-class Tank < ApplicationRecord
+class Specy < ApplicationRecord
   mount_uploader :image, ImageUploader
 
-  has_many :researches
-  has_and_belongs_to_many :species
+  has_and_belongs_to_many :tanks
 
   def name(language)
     language = language.downcase.gsub('-', '_')
@@ -18,5 +17,9 @@ class Tank < ApplicationRecord
     language = language.downcase.gsub('-','_')
     self.send("title_#{language}")
   end
-  
+
+  def scientific_name(language)
+    language = language.downcase.gsub('-','_')
+    self.send("scientific_name_#{language}")
+  end
 end

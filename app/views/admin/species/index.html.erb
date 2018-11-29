@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Admin Species</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name pt br</th>
+      <th>Name en us</th>
+      <th>Name es es</th>
+      <th>Scientific name pt br</th>
+      <th>Scientific name en us</th>
+      <th>Scientific name es es</th>
+      <th>Title pt br</th>
+      <th>Title en us</th>
+      <th>Title es es</th>
+      <th>Description pt br</th>
+      <th>Description en us</th>
+      <th>Description es es</th>
+      <th>Image</th>
+      <th>Order</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @species.each do |specy| %>
+      <tr>
+        <td><%= specy.name_pt_br %></td>
+        <td><%= specy.name_en_us %></td>
+        <td><%= specy.name_es_es %></td>
+        <td><%= specy.scientific_name_pt_br %></td>
+        <td><%= specy.scientific_name_en_us %></td>
+        <td><%= specy.scientific_name_es_es %></td>
+        <td><%= specy.title_pt_br %></td>
+        <td><%= specy.title_en_us %></td>
+        <td><%= specy.title_es_es %></td>
+        <td><%= specy.description_pt_br %></td>
+        <td><%= specy.description_en_us %></td>
+        <td><%= specy.description_es_es %></td>
+        <td><%= specy.image %></td>
+        <td><%= specy.order %></td>
+        <td><%= link_to 'Show', [:admin, specy] %></td>
+        <td><%= link_to 'Edit', edit_admin_specy_path(specy) %></td>
+        <td><%= link_to 'Destroy', [:admin, specy], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Admin Specy', new_admin_specy_path %>

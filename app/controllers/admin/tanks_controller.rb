@@ -38,6 +38,8 @@ class Admin::TanksController < AdminController
   # PATCH/PUT /admin/tanks/1
   # PATCH/PUT /admin/tanks/1.json
   def update
+    params[:tank][:specy_ids] ||= []
+    
     respond_to do |format|
       if @tank.update(tank_params)
         format.html { redirect_to [:admin, @tank], notice: 'Tank was successfully updated.' }
@@ -65,6 +67,6 @@ class Admin::TanksController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def tank_params
-      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image, :description_pt_br, :description_es_es, :description_en_us, :title_pt_br, :title_en_us, :title_es_es)
+      params.require(:tank).permit(:name_pt_br, :name_en_us, :name_es_es, :order, :image, :description_pt_br, :description_es_es, :description_en_us, :title_pt_br, :title_en_us, :title_es_es, specy_ids: [])
     end
 end

@@ -1,0 +1,95 @@
+<%= form_for(specy, url: specy.new_record? ?  admin_species_path : admin_specy_path(specy) ) do |f| %>
+  <% if specy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(specy.errors.count, "error") %> prohibited this specy from being saved:</h2>
+
+      <ul>
+      <% specy.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name_pt_br %>
+    <%= f.text_field :name_pt_br %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name_en_us %>
+    <%= f.text_field :name_en_us %>
+  </div>
+
+  <div class="field">
+    <%= f.label :name_es_es %>
+    <%= f.text_field :name_es_es %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scientific_name_pt_br %>
+    <%= f.text_field :scientific_name_pt_br %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scientific_name_en_us %>
+    <%= f.text_field :scientific_name_en_us %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scientific_name_es_es %>
+    <%= f.text_field :scientific_name_es_es %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title_pt_br %>
+    <%= f.text_field :title_pt_br %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title_en_us %>
+    <%= f.text_field :title_en_us %>
+  </div>
+
+  <div class="field">
+    <%= f.label :title_es_es %>
+    <%= f.text_field :title_es_es %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description_pt_br %>
+    <%= f.text_field :description_pt_br %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description_en_us %>
+    <%= f.text_field :description_en_us %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description_es_es %>
+    <%= f.text_field :description_es_es %>
+  </div>
+
+  <div class="form-group row mb-2">
+     <div class="col-4">            
+      <%= f.label :image %>
+      <%= f.file_field :image %> <br>
+      <%= image_tag(@specy.image.url(:thumb), class: 'card-img-top')%>  
+    </div>       
+  </div>
+
+  <% Tank.order(:order).each do |tank| %>
+    <%= check_box_tag "specy[tank_ids][]", tank.id, specy.tanks.include?(tank) %> 
+    <%= tank.name_pt_br %>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order %>
+    <%= f.number_field :order %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

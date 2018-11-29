@@ -1,0 +1,73 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name pt br:</strong>
+  <%= @specy.name_pt_br %>
+</p>
+
+<p>
+  <strong>Name en us:</strong>
+  <%= @specy.name_en_us %>
+</p>
+
+<p>
+  <strong>Name es es:</strong>
+  <%= @specy.name_es_es %>
+</p>
+
+<p>
+  <strong>Scientific name pt br:</strong>
+  <%= @specy.scientific_name_pt_br %>
+</p>
+
+<p>
+  <strong>Scientific name en us:</strong>
+  <%= @specy.scientific_name_en_us %>
+</p>
+
+<p>
+  <strong>Scientific name es es:</strong>
+  <%= @specy.scientific_name_es_es %>
+</p>
+
+<p>
+  <strong>Title pt br:</strong>
+  <%= @specy.title_pt_br %>
+</p>
+
+<p>
+  <strong>Title en us:</strong>
+  <%= @specy.title_en_us %>
+</p>
+
+<p>
+  <strong>Title es es:</strong>
+  <%= @specy.title_es_es %>
+</p>
+
+<p>
+  <strong>Description pt br:</strong>
+  <%= @specy.description_pt_br %>
+</p>
+
+<p>
+  <strong>Description en us:</strong>
+  <%= @specy.description_en_us %>
+</p>
+
+<p>
+  <strong>Description es es:</strong>
+  <%= @specy.description_es_es %>
+</p>
+
+<div class="col-3">  
+  <%= image_tag(@specy.image.url(:thumb), class: 'card-img-top') %>
+</div>
+
+<p>
+  <strong>Order:</strong>
+  <%= @specy.order %>
+</p>
+
+<%= link_to 'Edit', edit_admin_specy_path(@specy) %> |
+<%= link_to 'Back', admin_species_path %>

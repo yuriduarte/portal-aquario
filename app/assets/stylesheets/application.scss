@@ -97,6 +97,22 @@ body{
   text-shadow: 2px 2px 6px #000;
 }
 
+.bt {
+  margin-left: 31%
+}
+
+@media (min-width: 768px) {
+  .bt {
+    margin-left: 40%
+  }
+}
+
+@media (min-width: 1024px) {
+  .bt {
+    margin-left: 42%
+  }
+}
+
 .botao{
   margin-top: 5%;
   display: block;

@@ -22,7 +22,7 @@
       <tr>
           <td class="col-3"><%= research.title_pt_br %></td>
           <td class="col-2"><%= research.tank.name_pt_br %></td>
-          <td class="col-1"><%= link_to 'Visualizar como Usuário', researches_path(research.id), class:'btn btn-success' %></td>
+          <td class="col-1"><%= link_to 'Visualizar como Usuário', research_path(research), class:'btn btn-success' %></td>
           <td class="col-1"><%= link_to 'Mostrar', [:admin, research], class:'btn btn-primary' %></td>
           <td class="col-1"><%= link_to 'Editar', edit_admin_research_path(research), class:'btn btn-info'%></td>
           <td class="col-1"><%= link_to 'Deletar', [:admin, research], method: :delete, data: { confirm: 'Tem certeza?' }, class:'btn btn-danger' %></td>

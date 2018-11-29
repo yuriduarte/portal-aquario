@@ -1,25 +1,41 @@
 <div class="container header">
-      <div class="row">
-        <div class="col mt-5">
-          <%= link_to "/" do %>
-            <%= image_tag "logo/logo.png", class: 'logo' %>  
-          <% end %>
-        </div>    
-      </div>
-    </div>
+  <div class="row">
+    <div class="col mt-5">
+      <%= link_to "/" do %>
+        <%= image_tag "logo/logo.png", class: 'logo' %>  
+      <% end %>
+    </div>    
+  </div>
+</div>
 
 <div class="container">
   <h4 class="text-center titulo-pesquisa"><%= @tank.name(language) %></h4>
   <div class="card-deck">
-      <div class="card cartao">
-        <h5 class="card-title text-center mt-3 mr-2 ml-2"><%= @tank.title(language) %></h5><hr>
-        <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%><hr>
-        <div class="card-body">                    
-          <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p>
-        </div>
+    <div class="card cartao">
+      <h5 class="card-title text-center mt-3 mr-2 ml-2"><%= @tank.title(language) %></h5><hr>
+      <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%><hr>
+      <div class="card-body">                    
+        <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p>
       </div>
-      <div class="header mb-5">
-      <%= link_to t('home.buttons.back'), guidedtour_index_path, class: 'botao bt-home' %>
+
+      <% @tank.species.each do |specy| %>
+        <%= specy.name(language) %>
+        <%= specy.scientific_name(language) %>
+        <%= specy.title(language) %>
+        <%= specy.description(language) %>        
+        <%= image_tag specy.image.url(:thumb) %>
+      <% end %>
+
+      <div class="bt">
+        <% if @tank.researches.any? %>
+          <%= link_to research_path(@tank) do %>
+            <%= image_tag  "aqui_tem_pesquisa.png", class:'botao' %>
+          <% end %>
+        <% end %>
+      </div>      
+    </div>
+    <div class="header mb-5">      
+      <%= link_to t('home.buttons.back'), guidedtour_index_path, class: 'botao bt-home' %>      
     </div>
   </div>
 </div>
