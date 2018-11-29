@@ -11,85 +11,96 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name_pt_br %>
-    <%= f.text_field :name_pt_br %>
-  </div>
+  <div class="container-fluid">
 
-  <div class="field">
-    <%= f.label :name_en_us %>
-    <%= f.text_field :name_en_us %>
-  </div>
+    <div class="row mb-2">        
+      <div class="col-4">            
+        <%= f.label :name_pt_br %>  
+        <%= f.text_field :name_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
+      </div>
+      <div class="col-4">            
+        <%= f.label :name_en_us %>
+        <%= f.text_field :name_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
+      </div>            
+      <div class="col-4">            
+        <%= f.label :name_es_es %>
+        <%= f.text_field :name_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :name_es_es %>
-    <%= f.text_field :name_es_es %>
-  </div>
+    <div class="row mb-2">        
+      <div class="col-4">            
+        <%= f.label :scientific_name_pt_br %>    
+        <%= f.text_field :scientific_name_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
+      </div>       
+      <div class="col-4">            
+        <%= f.label :scientific_name_en_us %>
+        <%= f.text_field :scientific_name_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
+      </div>        
+      <div class="col-4">            
+        <%= f.label :scientific_name_es_es %>
+        <%= f.text_field :scientific_name_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :scientific_name_pt_br %>
-    <%= f.text_field :scientific_name_pt_br %>
-  </div>
+    <div class="row mb-2">        
+      <div class="col-4">            
+        <%= f.label :title_pt_br %>    
+        <%= f.text_field :title_pt_br, class:'form-control', placeholder:'Ex: Águas Vivas' %>            
+      </div>       
+      <div class="col-4">            
+        <%= f.label :title_en_us %>
+        <%= f.text_field :title_en_us, class:'form-control', placeholder:'Ex: Jellyfish' %>            
+      </div>        
+      <div class="col-4">            
+        <%= f.label :title_es_es %>
+        <%= f.text_field :title_es_es, class:'form-control', placeholder:'Ex: Medusas' %>            
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :scientific_name_en_us %>
-    <%= f.text_field :scientific_name_en_us %>
-  </div>
+    <div class="row mb-2">        
+      <div class="col-4">            
+        <%= f.label :description_pt_br %>
+        <%= f.text_area :description_pt_br, class:'form-control text-area', placeholder:'Digite uma descrição em Português...' %>            
+      </div>
+      <div class="col-4">            
+        <%= f.label :description_en_us %>
+        <%= f.text_area :description_en_us, class:'form-control text-area', placeholder:'Digite uma descrição em Inglês...' %>            
+      </div>
+      <div class="col-4">            
+        <%= f.label :description_es_es %>
+        <%= f.text_area :description_es_es, class:'form-control text-area', placeholder:'Digite uma descrição em Espanhol...' %>            
+      </div>
+    </div>
 
-  <div class="field">
-    <%= f.label :scientific_name_es_es %>
-    <%= f.text_field :scientific_name_es_es %>
-  </div>
+    <div class="form-group row mb-2">
+      <div class="col-4">            
+        <%= f.label :image %>
+        <%= f.file_field :image %> <br>
+        <%= image_tag(@specy.image.url(:thumb), class: 'card-img-top')%>  
+      </div>   
+      <div class="col-4">
+        <label for="exampleFormControlSelect1"><%= f.label :order %></label>            
+        <%= f.text_field :order, class:'form-control', placeholder:'(Opcional) Digite a ordem da espécie Ex: 1 (Para aparecer em primeiro)' %>
+      </div>        
+    </div>
+    
+    <h4 class="mb-2 mt-3">Selecione abaixo todos os tanques que essa espécie faz parte:</h4>
+    <div class="row mb-2">      
+      <% Tank.order(:order).each do |tank| %>
+        <div class="col-4">          
+            <%= check_box_tag "specy[tank_ids][]", tank.id, specy.tanks.include?(tank) %>
+            <%= tank.name_pt_br %>          
+        </div>
+      <% end %>    
+    </div>
 
-  <div class="field">
-    <%= f.label :title_pt_br %>
-    <%= f.text_field :title_pt_br %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title_en_us %>
-    <%= f.text_field :title_en_us %>
-  </div>
-
-  <div class="field">
-    <%= f.label :title_es_es %>
-    <%= f.text_field :title_es_es %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description_pt_br %>
-    <%= f.text_field :description_pt_br %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description_en_us %>
-    <%= f.text_field :description_en_us %>
-  </div>
-
-  <div class="field">
-    <%= f.label :description_es_es %>
-    <%= f.text_field :description_es_es %>
-  </div>
-
-  <div class="form-group row mb-2">
-     <div class="col-4">            
-      <%= f.label :image %>
-      <%= f.file_field :image %> <br>
-      <%= image_tag(@specy.image.url(:thumb), class: 'card-img-top')%>  
-    </div>       
-  </div>
-
-  <% Tank.order(:order).each do |tank| %>
-    <%= check_box_tag "specy[tank_ids][]", tank.id, specy.tanks.include?(tank) %> 
-    <%= tank.name_pt_br %>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :order %>
-    <%= f.number_field :order %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div class="actions">
+      <% if f.object.new_record? %>
+        <%= f.submit 'Criar', class:'btn btn-success' %>
+      <% else %>
+        <%= f.submit 'Atualizar', class:'btn btn-success' %>
+      <% end %>
+    </div>
   </div>
 <% end %>

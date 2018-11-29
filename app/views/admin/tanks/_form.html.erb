@@ -57,6 +57,7 @@
           <%= f.text_area :description_es_es, class:'form-control text-area', placeholder:'Digite uma descrição em Espanhol...' %>            
         </div>
       </div>
+
       <div class="form-group row mb-2">
         <div class="col-4">            
           <%= f.label :image %>
@@ -68,11 +69,16 @@
           <%= f.text_field :order, class:'form-control', placeholder:'Digite a ordem do tanque Ex: 1 (para primeiro)' %>
         </div>        
       </div>
-    
-      <% Specy.order(:order).each do |specy| %>
-        <%= check_box_tag "tank[specy_ids][]", specy.id, tank.species.include?(specy) %> 
-        <%= specy.name_pt_br %>
-      <% end %>
+
+      <h4 class="mb-2 mt-3">Selecione abaixo todas as espécies que faz parte desse tanque:</h4>
+      <div class="row mb-2">  
+        <% Specy.order(:order).each do |specy| %>
+          <div class="col-4">      
+            <%= check_box_tag "tank[specy_ids][]", specy.id, tank.species.include?(specy) %> 
+            <%= specy.name_pt_br %>
+          </div>
+        <% end %>
+      </div>
 
     <div class="actions">
       <% if f.object.new_record? %>
