@@ -19,11 +19,11 @@
         
         <% @tank.species.each do |specy| %>        
           <p class="card-text text-justify">
-            <b><%= specy.name(language) %></b>
-            <i><%= specy.scientific_name(language) %></i>            
+            <b><%= specy.name(language) %> - </b>
+            <i><%= specy.scientific_name(language) %>.</i>            
           </p>
           <%= image_tag specy.image.url(:tank), class: 'card-img-top mb-3' %>
-          <p>
+          <p class="text-justify">
             <%= specy.title(language) %>
             <%= specy.description(language) %>          
           </p>          

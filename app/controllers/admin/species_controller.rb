@@ -4,7 +4,7 @@ class Admin::SpeciesController < AdminController
   # GET /admin/species
   # GET /admin/specy.json
   def index
-    @species = Specy.all
+    @species = Specy.order(:order)
   end
 
   # GET /admin/species/1
