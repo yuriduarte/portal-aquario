@@ -15,8 +15,15 @@
       <h5 class="card-title text-center mt-3 mr-2 ml-2"><%= @tank.title(language) %></h5><hr>
       <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
       <div class="card-body">                    
-        <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p><hr>
-        
+        <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p>
+        <div class="bt">
+          <% if @tank.researches.any? %>
+            <%= link_to research_path(@tank) do %>
+              <%= image_tag  "botoes/btn-pesquisa.png", class:'btn-pesquisa' %>
+            <% end %>
+          <% end %>
+        </div>      
+        <hr>        
         <% @tank.species.each do |specy| %>        
           <p class="card-text text-justify">
             <b><%= specy.name(language) %> - </b>
@@ -28,18 +35,23 @@
             <%= specy.description(language) %>          
           </p>          
         <% end %>
-
       </div>
 
-      
-
-      <div class="bt">
-        <% if @tank.researches.any? %>
-          <%= link_to research_path(@tank) do %>
-            <%= image_tag  "aqui_tem_pesquisa.png", class:'botao' %>
+      <div class="row justify-content-md-center mb-2">
+        <div class="col text-center">          
+          <%= link_to do %>
+            <p>Ouvir Áudio</p>
+            <%= image_tag  "botoes/btn-audio.png", class:'btn-interacao' %>
           <% end %>
-        <% end %>
-      </div>      
+        </div>
+        <div class="col text-center">          
+          <%= link_to do %>
+            <p>Assistir Libras</p>
+            <%= image_tag  "botoes/btn-libras.png", class:'btn-interacao' %>
+          <% end %>
+        </div>
+      </div>
+      
     </div>
     <div class="header mb-5">      
       <%= link_to t('home.buttons.back'), guidedtour_index_path, class: 'botao bt-home' %>      
