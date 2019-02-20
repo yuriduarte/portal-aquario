@@ -6,6 +6,8 @@ en-US:
       circuitmap: 'Circuit Map'
       extraactivities: 'Extra activities'
       back: 'Back'
+      other_tanks: 'Other Tanks'
+      other_researches: 'Other Searches'
   strings:
     search: 'Search'
   activerecord:

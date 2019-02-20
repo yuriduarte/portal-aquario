@@ -6,6 +6,8 @@ es-ES:
       circuitmap: 'Mapa del Circuito'
       extraactivities: 'Actividades Extras'
       back: 'Regreso'
+      other_tanks: 'Otros Tanques'
+      other_researches: 'Otras Búsquedas'
   strings:
     search: 'Teste'
   activerecord:

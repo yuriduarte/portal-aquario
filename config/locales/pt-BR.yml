@@ -6,6 +6,8 @@ pt-BR:
       circuitmap: 'Mapa do Circuito'
       extraactivities: 'Atividades Extras'
       back: 'Voltar'
+      other_tanks: 'Outros Tanques'
+      other_researches: 'Outras Pesquisas'
   strings:
     search: 'Pesquisa'
   activerecord:
