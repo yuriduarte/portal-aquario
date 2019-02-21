@@ -22,9 +22,21 @@
             <%= link_to pt_br_path do %>
             <%= image_tag "bandeiras/br.png", class: 'img-responsive bandeiras' %>  
           <% end %>          
-        </div>    
+        </div>        
       </div>
-    </div>    
+    </div> 
+    <div class="container header">
+      <div class="row">
+        <div class="col band-libras fixed-top-libras">
+          <%= link_to es_es_path do %>
+            <%= image_tag "botoes/btn-libras.png", class: 'img-responsive bandeiras-libras' %>  
+          <% end %>         
+          <%= link_to en_us_path do %>
+            <%= image_tag "botoes/btn-audio.png", class: 'img-responsive bandeiras-libras' %>  
+          <% end %>       
+        </div>        
+      </div>
+    </div>      
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= yield(:footer) %>

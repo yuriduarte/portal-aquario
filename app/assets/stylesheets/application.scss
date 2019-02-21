@@ -35,6 +35,19 @@ body{
   margin-right: 5px;
 }
 
+.band-libras {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1px;
+  width: 67px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px;
+  border-radius: 2rem;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
 .fixed-top {
   position: fixed;
   top: 0;
@@ -43,12 +56,29 @@ body{
   left: inherit;
 }
 
+.fixed-top-libras {
+  position: fixed;
+  top: 0;
+  right: 96%;
+  z-index: 1030;
+  left: inherit;
+}
+
 .bandeiras{
-  margin-top: 3px;
+  margin-top: 0px;
   width: 2rem;
   float: right;
   border: 1px solid transparent;
   border-radius: 0.75rem;
+}
+
+.bandeiras-libras{
+  margin-top: 0px;
+  width: 2rem;
+  float: right;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: 2px;
 }
 
 .logo{
@@ -95,6 +125,7 @@ body{
   color: #fff;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-shadow: 2px 2px 6px #000;
+  font-size: 2rem;
 }
 
 .bt {
@@ -243,6 +274,13 @@ body{
     margin-bottom: 42%;
     margin-top: 20px;
   }
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 90%;
+    z-index: 1030;
+    left: inherit;
+  }
 }
 
 @media (max-width: 540px){
@@ -251,6 +289,13 @@ body{
       asset-url('mobile1.jpg');
       background-size: cover;
       background-repeat: no-repeat;
+  }
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 82%;
+    z-index: 1030;
+    left: inherit;
   }
 }
 
@@ -274,6 +319,13 @@ body{
     border-radius: 0.75rem;
     text-decoration: none;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 90%;
+    z-index: 1030;
+    left: inherit;
   }
 }
 
@@ -307,6 +359,32 @@ body{
     margin-bottom: 5%;
     justify-content: center;
     margin: auto;
+  }
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 92%;
+    z-index: 1030;
+    left: inherit;
+  }
+}
+
+@media (min-width: 1440px){
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 94%;
+    z-index: 1030;
+    left: inherit;
+  }
+}
+@media (min-width: 1640px){
+  .fixed-top-libras {
+    position: fixed;
+    top: 0;
+    right: 96%;
+    z-index: 1030;
+    left: inherit;
   }
 }
 
