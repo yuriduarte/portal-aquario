@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181128234808) do
+ActiveRecord::Schema.define(version: 20190221183320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 20181128234808) do
     t.string   "author",            default: [],              array: true
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.string   "link_libras"
+    t.string   "link_audio"
     t.index ["tank_id"], name: "index_researches_on_tank_id", using: :btree
   end
 
@@ -68,6 +70,8 @@ ActiveRecord::Schema.define(version: 20181128234808) do
     t.string   "title_pt_br"
     t.string   "title_en_us"
     t.string   "title_es_es"
+    t.string   "link_libras"
+    t.string   "link_audio"
   end
 
 end

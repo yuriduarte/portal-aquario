@@ -69,6 +69,6 @@ class Admin::ResearchesController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def research_params
-      params.require(:research).permit(:tank_id, :title_pt_br, :title_en_us, :title_es_es, :description_pt_br, :description_en_us, :description_es_es, :author, :image)
+      params.require(:research).permit(:tank_id, :title_pt_br, :title_en_us, :title_es_es, :description_pt_br, :description_en_us, :description_es_es, :author, :image, :link_libras, :link_audio)
     end
 end
