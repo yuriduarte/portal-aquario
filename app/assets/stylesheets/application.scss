@@ -129,24 +129,24 @@ body{
 }
 
 .bt {
-  margin-left: 19%;
+  //margin-left: 19%;
 }
 
 @media (min-width: 768px) {
   .bt {
-    margin-left: 30%;
+    //margin-left: 30%;
   }
   .btn-pesquisa {
-    width: 56% !important; 
+    width: 23% !important; 
   }
 }
 
 @media (min-width: 1024px) {
   .bt {
-    margin-left: 36%;
+    //margin-left: 36%;
   }
   .btn-pesquisa {
-    width: 42% !important; 
+    width: 21% !important; 
   }
 }
 
@@ -175,7 +175,9 @@ body{
 .btn-pesquisa {
   margin-bottom: 10px;
   display: block;
-  width: 72%;  
+  width: 30%;  
+  position: absolute;
+  padding: 8px;
   text-align: center;  
   vertical-align: middle;  
   border: 1px solid transparent;  

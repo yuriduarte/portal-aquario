@@ -21,7 +21,9 @@
           </div>
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="<%= @research.link_libras %>"></iframe>
+              <% @researches.each do |r| %>
+                <iframe class="embed-responsive-item" src="<%= r.link_libras %>"></iframe>
+              <% end %>              
             </div>
           </div>
         </div>
@@ -39,7 +41,9 @@
           </div>
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="<%= @research.link_audio %>"></iframe>
+              <% @researches.each do |r| %>
+                <iframe class="embed-responsive-item" src="<%= r.link_audio %>"></iframe>
+              <% end %>  
             </div>
           </div>
         </div>

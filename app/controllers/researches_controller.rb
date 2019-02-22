@@ -8,7 +8,6 @@ class ResearchesController < ApplicationController
   def show
     @tank = Tank.find(params[:id])    
     @researches = @tank.researches
-    @research = Research.find(params[:id])    
   end
   
 end

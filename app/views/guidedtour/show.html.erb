@@ -21,33 +21,42 @@
           </div>
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="<%= @tank.link_libras %>"></iframe>
+              <iframe class="embed-responsive-item yt" src="<%= @tank.link_libras %>"></iframe>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
+    </div>   
+    <script>
+      $('.modal.stop-video-on-close').on('hidden.bs.modal', function(e) {
+        $('.video-to-stop', this).each(function() {
+          this.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+        });
+      });
+    </script>
     <!-- Modal Audio -->
-    <div class="modal fade" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
+    <div class="modal fade stop-video-on-close" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="ModalAudioTitle"><%= @tank.name(language) %> - Audio</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">            
               <span aria-hidden="true">&times;</span>
-            </button>
+            </button>               
           </div>
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
-              <iframe class="embed-responsive-item" src="<%= @tank.link_audio %>"></iframe>
+              <iframe class="embed-responsive-item video-to-stop" id="" src="<%= @tank.link_audio %>"></iframe>
             </div>
+            <button class="" data-dismiss="modal" type="button">Stop</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <div class="container header">
   <div class="row">
@@ -64,17 +73,18 @@
   <div class="card-deck">
     <div class="card cartao">
       <h5 class="card-title text-center mt-3 mr-2 ml-2"><%= @tank.title(language) %></h5><hr>
-      <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
+      <div class="bt float-left">
+        <% if @tank.researches.any? %>
+          <%= link_to research_path(@tank) do %>
+            <%= image_tag  "botoes/btn-pesquisa-novo.png", class:'btn-pesquisa' %>
+            <%= image_tag(@tank.image.url(:tank) || 'sem-imagem.jpeg', class: 'card-img-top')%>
+          <% end %>
+        <% end %>
+      </div>  
+      
       <div class="card-body">                    
         <p class="card-text text-justify"><%= raw @tank.description(language).to_s.gsub(/\n/, '<br>') %></p>
-        <div class="bt">
-          <% if @tank.researches.any? %>
-            <%= link_to research_path(@tank) do %>
-              <%= image_tag  "botoes/btn-pesquisa.png", class:'btn-pesquisa' %>
-            <% end %>
-          <% end %>
-        </div>      
-        <hr>        
+
         <% @tank.species.each do |specy| %>        
           <p class="card-text text-justify">
             <b><%= specy.name(language) %> - </b>
@@ -86,22 +96,7 @@
             <%= specy.description(language) %>          
           </p>          
         <% end %>
-      </div>
-
-      <div class="row justify-content-md-center mb-2">
-        <div class="col text-center">          
-          <%= link_to do %>
-            <p>Ouvir Áudio</p>
-            <%= image_tag  "botoes/btn-audio.png", class:'btn-interacao' %>
-          <% end %>
-        </div>
-        <div class="col text-center">          
-          <%= link_to do %>
-            <p>Assistir Libras</p>
-            <%= image_tag  "botoes/btn-libras.png", class:'btn-interacao' %>
-          <% end %>
-        </div>
-      </div>
+      </div>      
       
     </div>
     <div class="header mb-5">      
