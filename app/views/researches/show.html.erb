@@ -30,7 +30,7 @@
       </div>
     </div>
     <!-- Modal Audio -->
-    <div class="modal fade" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
+    <div class="modal stop-video-on-close fade" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -42,15 +42,20 @@
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
               <% @researches.each do |r| %>
-                <iframe class="embed-responsive-item" src="<%= r.link_audio %>"></iframe>
+                <iframe class="embed-responsive-item youtube-video" src="<%= r.link_audio %>"></iframe>
               <% end %>  
             </div>
+            <div class="mt-5"><a href="#" class="play-video">Play Video</a></div>
+    <div><a href="#" class="stop-video">Stop Video</a></div>
+    <div><a href="#" class="pause-video">Pause Video</a></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+    
 
 <div class="container header">
   <div class="row pesquisa">

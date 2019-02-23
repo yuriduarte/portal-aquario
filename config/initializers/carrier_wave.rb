@@ -4,8 +4,8 @@ if Rails.env.production?
     config.fog_credentials = {
       provider:              'AWS',
       aws_access_key_id:     ENV['AWS_PUBLIC_KEY'],
-      aws_secret_access_key: ENV['AWS_SECRET_KEY'],
-      region:                'us-east-1'
+      aws_secret_access_key: ENV['AWS_SECRET_KEY'],     
+      region:                ENV['AWS_REGION'] ||'us-east-1'
     }
 
     config.fog_directory  = ENV['AWS_BUCKET']
