@@ -4,13 +4,13 @@
       <!-- Button trigger modal -->
       <%= link_to "#" do %>
         <%= image_tag "botoes/btn-libras.png", class: 'img-responsive bandeiras-libras', "data-toggle" => "modal", "data-target" => "#ModalLibras" %>  
-      <% end %>         
+      <% end if @tank.link_libras.present? %>         
       <%= link_to "#" do %>
         <%= image_tag "botoes/btn-audio.png", class: 'img-responsive bandeiras-libras', "data-toggle" => "modal", "data-target" => "#ModalAudio" %>  
-      <% end %>       
+      <% end if @tank.link_audio.present? %>       
     </div> 
     <!-- Modal Libras -->
-    <div class="modal fade" id="ModalLibras" tabindex="-1" role="dialog" aria-labelledby="ModalLibrasTitle" aria-hidden="true">
+    <div class="modal fade youtube-video" id="ModalLibras" tabindex="-1" role="dialog" aria-labelledby="ModalLibrasTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -22,7 +22,7 @@
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
               <% @researches.each do |r| %>
-                <iframe class="embed-responsive-item" src="<%= r.link_libras %>"></iframe>
+                <iframe class="embed-responsive-item" src="<%= r.link_libras %>?enablejsapi=1&version=3&playerapiid=ytplayer"></iframe>
               <% end %>              
             </div>
           </div>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <!-- Modal Audio -->
-    <div class="modal stop-video-on-close fade" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
+    <div class="modal youtube-video fade" id="ModalAudio" tabindex="-1" role="dialog" aria-labelledby="ModalAudioTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -42,12 +42,9 @@
           <div class="modal-body">
             <div class="embed-responsive embed-responsive-4by3">
               <% @researches.each do |r| %>
-                <iframe class="embed-responsive-item youtube-video" src="<%= r.link_audio %>"></iframe>
+                <iframe class="embed-responsive-item" src="<%= r.link_audio %>?enablejsapi=1&version=3&playerapiid=ytplayer"></iframe>
               <% end %>  
             </div>
-            <div class="mt-5"><a href="#" class="play-video">Play Video</a></div>
-    <div><a href="#" class="stop-video">Stop Video</a></div>
-    <div><a href="#" class="pause-video">Pause Video</a></div>
           </div>
         </div>
       </div>
